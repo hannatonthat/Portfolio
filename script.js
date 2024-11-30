@@ -23,6 +23,6 @@ function observerCallback(entries, observer) {
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-const itemsToObserve = document.querySelectorAll('.timeline-item, .projects-item, .skills-box');
+const itemsToObserve = document.querySelectorAll('.timeline-item, .projects-item, .skills-box, .contact-container');
 
 itemsToObserve.forEach((item) => observer.observe(item));
