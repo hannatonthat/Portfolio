@@ -55,12 +55,12 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding-top: 0.5rem;
-    height: 12vh;
+    height: 10vh;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 0.5rem;
     list-style: none;
     font-size: 1.2rem;
     font-weight: 600;
@@ -68,27 +68,19 @@ nav {
 
 a {
     color: white;
+    padding: 0.5rem 0.8rem;
     text-decoration: none;
-    text-decoration-color: black;
+    border-radius: 7.5px;
 }
 
 a:hover {
     color: white;
-    text-decoration: underline;
-    text-underline-offset: 0.2rem;
-    text-decoration-color: white;
+    background-color: rgb(33, 33, 33);
 }
 
 .logo {
     font-size: 1.2rem;
     font-weight: 600;
-}
-
-.logo:hover {
-    color: white;
-    text-decoration: underline;
-    text-underline-offset: 0.2rem;
-    text-decoration-color: white;
 }
 
 #hamburger-nav {
@@ -126,6 +118,7 @@ a:hover {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     padding-top: 1rem;
+    border-radius: 7.5px;
 }
 
 .menu-links a {
@@ -136,7 +129,7 @@ a:hover {
     color: white;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-    border-radius: 5px;
+    border-radius: 7.5px;
 }
 
 .menu-links a:hover {
@@ -252,7 +245,7 @@ section {
     font-size: 1rem;
     transition: all 300ms ease;
     padding: 0.75rem;
-    width: 6.5rem;
+    width: 6rem;
     border: none;
     border-radius: 2rem;
     text-align: center;
@@ -270,7 +263,7 @@ section {
     color: black;
     background-color: white;
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.025);
 }
 .skills-container {
     display: grid;
