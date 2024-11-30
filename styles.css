@@ -14,8 +14,11 @@ html {
 }
 
 h1 {
+    position: relative;
     font-weight: 600;
     font-size: 1.6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 h2 {
@@ -31,7 +34,7 @@ h3 {
 p {
     color: white;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 a, 
@@ -203,6 +206,7 @@ section {
 }
 
 .title {
+    padding: 0;
     font-size: 3rem;
     text-align: center;
 }
@@ -215,6 +219,7 @@ section {
 }
 
 .icon {
+    margin-top: 0.5rem;
     cursor: pointer;
     height: 2rem;
     transition: all 300ms ease;
@@ -246,8 +251,8 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: rgb(33, 33, 33);
 }
 
 .btn-color-1:hover,
@@ -262,8 +267,6 @@ section {
     align-items: center;
     text-align: center;
     gap: 1rem;
-    padding: 2rem 0;
-
 }
 
 .skills-box {
@@ -298,62 +301,148 @@ section {
     width: 2.25rem;
 }
 
-.timeline {
-    margin-top: 2rem;
+.timeline-items {
+    max-width: 100%;
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
     position: relative;
-    background-color: white;
-    width: 50%;
 }
 
-
-
-.timeline-container {
-    padding: 1rem;
-    position: relative;
-    width: 80%;
-    background-color: rgb(33, 33, 33);
-    border-radius: 1rem;
-}
-
-.timeline-img {
+.timeline-items::before {
+    content: ' ';
     position: absolute;
-    right: -5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    background-color: white;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(33, 33, 33);
+    left: calc(50% - 1px);
+}
+
+.timeline-item {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.timeline-item:nth-child(odd) {
+    margin-right: calc(50% + 2rem);
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: calc(50% + 2rem);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    height: 16px;
+    width: 16px;
+    background-color: rgb(33, 33, 33);
     border-radius: 50%;
+    position: absolute;
 }
 
-.right-container .timeline-img {
-    left: -5rem;
-}
-
-.timeline-icon {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-}
-
-.timeline-text-description {
-    margin-top: 1rem;
+.timeline-item:nth-child(odd) .timeline-dot {
+    left: calc(100% + 8px);
+    text-align: left;
     margin-left: 1rem;
-    font-size: 0.8rem;
-    font-weight: 400;
 }
 
-.timeline-text-description ul li{
-    margin-bottom: 0.5rem;
+.timeline-item:nth-child(even) .timeline-dot {
+    right: calc(100% + 8px);
+    text-align: right;
+    margin-right: 1rem;
 }
 
-.left-container {
-    left: 0;
+.timeline-date {
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    margin-top: 0.5rem;
 }
 
-.right-container {
-    left: 50%;
-    right: 0;
+.timeline-item:nth-child(odd) .timeline-date {
+    left: calc(100% + 3rem);
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    right: calc(100% + 3rem);
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.timeline-content {
+    background-color: rgb(33, 33, 33);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.timeline-content:hover {
+    scale: 1.025;
+}
+
+.timeline-content ul li{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width: 767px) {
+    .timeline-content {
+        margin-top: 2rem;
+    }
+    .timeline-item:nth-child(odd) {
+        margin-right: 0;
+        margin-left: 2rem;
+        text-align: left;
+    }
+    .timeline-item:nth-child(even) {
+        margin-left: 2rem;
+    }
+    .timeline-items::before {
+        left: calc(1rem - 1px);
+    }
+    .timeline-dot {
+        left: 0.5rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+        left: calc(-1rem - 8px);
+        margin: 0;
+        background-color: rgb(33, 33, 33);
+    }
+    
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: calc(-1rem - 8px);
+        margin: 0;
+        background-color: rgb(33, 33, 33);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date {
+        left: 0;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-date {
+        left: 0;
+        margin-top: 0.5rem;
+    }
 }
