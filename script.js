@@ -4,23 +4,25 @@ function toggleMenu() {
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
-document.addEventListener('DOMContentLoaded', () => {
-    const timelineItems = document.querySelectorAll('.timeline-item');
 
-    const isInViewport = (element) => {
-        const rect = element.getBoundingClientRect();
-        return rect.top < window.innerHeight && rect.bottom > 0;
-    };
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
 
-    const handleScroll = () => {
-        timelineItems.forEach((item, index) => {
-            if (isInViewport(item)) {
-                item.style.transitionDelay = `${index * 0.3}s`;
-                item.classList.add('visible');
-            }
-        });
-    };
+function observerCallback(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+}
 
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-});
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+const itemsToObserve = document.querySelectorAll('.timeline-item, .projects-item, .skills-box');
+
+itemsToObserve.forEach((item) => observer.observe(item));
