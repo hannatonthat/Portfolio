@@ -13,13 +13,25 @@ html {
     scroll-behavior: smooth;
 }
 
+h1 {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
 h3 {
-    font-weight: 100;
+    font-weight: 400;
     font-size: 1.2rem;
 }
 
 p {
     color: white;
+    font-weight: 400;
+    font-size: 2rem;
 }
 
 a, 
@@ -117,11 +129,11 @@ a:hover {
     color: white;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .menu-links a:hover {
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(33, 33, 33);
 }
 
 .menu-links li {
@@ -157,7 +169,6 @@ a:hover {
 
 section {
     padding-top: 4vh;
-    height: 96vh;
     margin: 0 15rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -268,11 +279,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4rem;
-    width: 4rem;
+    height: 4.5rem;
+    width: 4.5rem;
     margin: 0 auto;
     margin-bottom: 0.5rem;
-    background-color: rgb(67,67,67);
+    background-color: rgb(33, 33, 33);
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
 }
@@ -287,3 +298,62 @@ section {
     width: 2.25rem;
 }
 
+.timeline {
+    margin-top: 2rem;
+    display: flex;
+    position: relative;
+    background-color: white;
+    width: 50%;
+}
+
+
+
+.timeline-container {
+    padding: 1rem;
+    position: relative;
+    width: 80%;
+    background-color: rgb(33, 33, 33);
+    border-radius: 1rem;
+}
+
+.timeline-img {
+    position: absolute;
+    right: -5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.right-container .timeline-img {
+    left: -5rem;
+}
+
+.timeline-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.timeline-text-description {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.timeline-text-description ul li{
+    margin-bottom: 0.5rem;
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+    right: 0;
+}
