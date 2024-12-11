@@ -36,10 +36,33 @@ var typed = new Typed(".auto-type", {
     cursorBlinking: true,
 });
 
-const cursor = document.getElementById('custom-cursor');
+document.addEventListener("DOMContentLoaded", function() {
+    const cursor = document.querySelector(".cursor");
 
-document.addEventListener('mousemove', (e) => {
-    const cursorSize = cursor.offsetWidth / 2;
-    cursor.style.left = `${e.clientX - cursorSize}px`;
-    cursor.style.top = `${e.clientY - cursorSize}px`;
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    const speed = 0.1;
+    document.addEventListener("mousemove", function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * speed;
+        cursorY += (mouseY - cursorY) * speed;
+        cursor.style.left = `${cursorX - cursor.offsetWidth / 2}px`;
+        cursor.style.top = `${cursorY - cursor.offsetHeight / 2}px`;
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+});
+
+document.getElementById('copy-email-icon').addEventListener('click', function() {
+    const email = "htonthat@uwaterloo.ca";
+    navigator.clipboard.writeText(email)
+        .then(function() {
+            alert('Email copied to clipboard!');
+        })
+        .catch(function(error) {
+            console.error('Error copying email: ', error);
+        });
 });

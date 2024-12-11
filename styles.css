@@ -648,7 +648,6 @@ section {
     z-index: -1;
 }
 
-
 .cursor::before {
     content: '';
     display: block;
