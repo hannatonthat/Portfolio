@@ -26,3 +26,12 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 const itemsToObserve = document.querySelectorAll('.timeline-item, .projects-item, .skills-box, .contact-container');
 
 itemsToObserve.forEach((item) => observer.observe(item));
+
+var typed = new Typed(".auto-type", {
+    strings: ["Software Developer", "AR/VR Developer", "AI Engineer"],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop: true,
+    cursorChar: "|",
+    cursorBlinking: true,
+});

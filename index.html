@@ -20,188 +20,197 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="language-toggle">FR</button>
+                </li>
             </ul>
         </div>
     </nav>
     <nav id="hamburger-nav">
         <div class="logo"><a href="#home">Hanna</a></div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="menu-nav">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </div>
             </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
+            <button id="language-toggle">FR</button>
         </div>
     </nav>
-    <section id="about">
-        <div class="section__pic-container">
-            <img src="./assets/images/about.png" alt="Profile Picture">
-        </div>
-        <div class="section__text">
-            <h1 class="title">Hi, I'm Hanna!</h1>
-            <h3 class="section__text__p1">A Mechatronics Engineering student at the University of Waterloo passionate about AI, robotics, and software development.</h3>
-            <div class="btn-container">
-                <button
-                    class="btn btn-color-1"
-                    onclick="location.href='./#contact'"
-                >Contact</button>
-                <button
-                    class="btn btn-color-2"
-                    onclick="window.open('./assets/pdfs/resume.pdf')"
-                >Resume</button>
+    
+    <section id="home">
+            <div class="section__text">
+                <h1 class="title-intro">Hi, my name is</h1>
+                <h1 class="title">Hanna Ton That</h1>
+                <h1 class="auto-type-box"><span class="auto-type"></span></h1>
+                <div id="socials-container">
+                    <img src="./assets/images/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://linkedin.com/in/hannatonthat'">
+                    <img src="./assets/images/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/hannatonthat'">
+                </div>
             </div>
-            <div id="socials-container">
-                <img src="./assets/images/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://linkedin.com/in/hannatonthat'">
-                <img src="./assets/images/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/hannatonthat'">
+    </section>
+    <section id="about">
+        <h1>About</h1>
+        <div class="about-container">
+            <div class="about-pic">
+                <img src="./assets/images/about.png" alt="Profile Picture">
+            </div>
+            <div class="about-text">
+                <h3>Hi, I'm Hanna, a Mechatronics Engineering student at the University of Waterloo!</h3>
+                <h3>Passionate about AI, robotics, and software development, I'm committed to building high-quality applications that bring real value to the world.</h3>
+                <h3>Keep reading to see what I'm up to!</h3>
             </div>
         </div>
     </section>
     <section id="skills">
-        <div>
-            <h1 class="skills">Skills</h1>
-        </div>
-        <div class="skills-container">
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/c.png" class="skills-icon">
-                </div>
-                <h3>C</h3>
+            <div>
+                <h1 class="skills">Skills</h1>
             </div>
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/c++.png" class="skills-icon">
+            <div class="skills-container">
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/c.png" class="skills-icon">
+                    </div>
+                    <h3>C</h3>
                 </div>
-                <h3>C++</h3>
-            </div>
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/python.png" class="skills-icon">
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/c++.png" class="skills-icon">
+                    </div>
+                    <h3>C++</h3>
                 </div>
-                <h3>Python</h3>
-            </div>
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/html.png" class="skills-icon">
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/python.png" class="skills-icon">
+                    </div>
+                    <h3>Python</h3>
                 </div>
-                <h3>HTML</h3>
-            </div>
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/css.png" class="skills-icon">
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/html.png" class="skills-icon">
+                    </div>
+                    <h3>HTML</h3>
                 </div>
-                <h3>CSS</h3>
-            </div>
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/javascript.png" class="skills-icon">
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/css.png" class="skills-icon">
+                    </div>
+                    <h3>CSS</h3>
                 </div>
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/typescript.png" class="skills-icon">
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/javascript.png" class="skills-icon">
+                    </div>
+                    <h3>JavaScript</h3>
                 </div>
-                <h3>TypeScript</h3>
-            </div>
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/react.png" class="skills-icon">
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/typescript.png" class="skills-icon">
+                    </div>
+                    <h3>TypeScript</h3>
                 </div>
-                <h3>React</h3>
-            </div>
-            <div class="skills-box">
-                <div class="skills-img">
-                    <img src="./assets/images/node.png" class="skills-icon">
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/react.png" class="skills-icon">
+                    </div>
+                    <h3>React</h3>
                 </div>
-                <h3>Node.js</h3>
+                <div class="skills-box">
+                    <div class="skills-img">
+                        <img src="./assets/images/node.png" class="skills-icon">
+                    </div>
+                    <h3>Node.js</h3>
+                </div>
             </div>
-        </div>
     </section>
     <section id="experience">
-        <h1>Experience</h1>
-        <div class="timeline-items">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">May 2024 - August 2024</div>
-                <div class="timeline-content">
-                    <h2>Software Research Intern</h2>
-                    <h3>CHU Sainte-Justine</h3>
-                    <ul>
-                        <li>Developed Python-based machine learning algorithms with TensorFlow and PyTorch to detect punctate white matter lesions in neonatal neuroimaging datasets</li>
-                        <li>Optimized diffusion imaging models (DTI, DKI, Free Water, Q-Ball) using DIPY to enhance reconstruction methods</li>
-                        <li>Built interactive medical image viewing tools using Dash and Matplotlib, enabling exploration and analysis of neuroimaging data</li>
-                    </ul>
+            <h1>Experience</h1>
+            <div class="timeline-items">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">May 2024 - August 2024</div>
+                    <div class="timeline-content">
+                        <h2>Software Research Intern</h2>
+                        <h3>CHU Sainte-Justine</h3>
+                        <ul>
+                            <li>Developed Python-based machine learning algorithms with TensorFlow and PyTorch to detect punctate white matter lesions in neonatal neuroimaging datasets</li>
+                            <li>Optimized diffusion imaging models (DTI, DKI, Free Water, Q-Ball) using DIPY to enhance reconstruction methods</li>
+                            <li>Built interactive medical image viewing tools using Dash and Matplotlib, enabling exploration and analysis of neuroimaging data</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jan 2024 - May 2024</div>
+                    <div class="timeline-content">
+                        <h2>Software Research Intern</h2>
+                        <h3>Dawson College</h3>
+                        <ul>
+                            <li>Designed, built, and programmed a 3D-printed Boston Dynamics robot model in C++, implementing PID control and odometry to enable precise movement and accurate positioning for educational applications</li>
+                            <li>Developed makerspace resources to support students in building and programming robotics projects, fostering hands-on learning experiences</li>
+                            <li>Wrote a scientific report documenting the project and presented at the 2024 SALTISE Conference</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Jan 2024 - May 2024</div>
-                <div class="timeline-content">
-                    <h2>Software Research Intern</h2>
-                    <h3>Dawson College</h3>
-                    <ul>
-                        <li>Designed, built, and programmed a 3D-printed Boston Dynamics robot model in C++, implementing PID control and odometry to enable precise movement and accurate positioning for educational applications</li>
-                        <li>Developed makerspace resources to support students in building and programming robotics projects, fostering hands-on learning experiences</li>
-                        <li>Wrote a scientific report documenting the project and presented at the 2024 SALTISE Conference</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </section>
     <section id="projects">
-        <h1>Projects</h1>
-        <div class="projects-container">
-            <div class="projects-item">
+            <h1>Projects</h1>
+            <div class="projects-container">
+                    <div class="projects-item">
+                    </div>
+                    <div class="projects-item">
+                    </div>
+                    <div class="projects-item">
+                    </div>
+                    <div class="projects-item">
+                    </div>
+                    <div class="projects-item">
+                    </div>
+                    <div class="projects-item">
+                    </div>
+                    <div class="projects-item">
+                    </div>
+                    <div class="projects-item">
+                    </div>
             </div>
-            <div class="projects-item">
-            </div>
-            <div class="projects-item">
-            </div>
-            <div class="projects-item">
-            </div>
-            <div class="projects-item">
-            </div>
-            <div class="projects-item">
-            </div>
-            <div class="projects-item">
-            </div>
-            <div class="projects-item">
-            </div>
-        </div>
     </section>
     <section id="contact">
-        <div class="contact-container">
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357575.5951763736!2d-74.04153667150327!3d45.55918946940927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC!5e0!3m2!1sen!2sca!4v1732998768253!5m2!1sen!2sca" width=100% height=auto style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-container">
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d357575.5951763736!2d-74.04153667150327!3d45.55918946940927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC!5e0!3m2!1sen!2sca!4v1732998768253!5m2!1sen!2sca" width=100% height=auto style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-form">
+                    <h1>Contact</h1>
+                    <form>
+                        <input type="text" placeholder="Name" class="contact-form-txt">
+                        <input type="text" placeholder="Email" class="contact-form-txt">
+                        <textarea placeholder="Message" class="contact-form-textarea"></textarea>
+                        <input type="submit" class="contact-form-btn">
+                    </form>
+                </div>
             </div>
-            <div class="contact-form">
-                <h1>Contact</h1>
-                <form>
-                    <input type="text" placeholder="Name" class="contact-form-txt">
-                    <input type="text" placeholder="Email" class="contact-form-txt">
-                    <textarea placeholder="Message" class="contact-form-textarea"></textarea>
-                    <input type="submit" class="contact-form-btn">
-                </form>
-            </div>
-        </div>
     </section>
     <section id="info">
-        <div class="info-line"></div>
-        <div class="info-text-box">
-            <p>Hanna Ton That © 2024</p>
-            <div id="info-socials-container">
-                <img src="./assets/images/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://linkedin.com/in/hannatonthat'">
-                <img src="./assets/images/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/hannatonthat'">
+            <div class="info-line"></div>
+            <div class="info-text-box">
+                <p>Hanna Ton That © 2024</p>
+                <div id="info-socials-container">
+                    <img src="./assets/images/linkedin.png" alt="LinkedIn" class="info-icon" onclick="location.href='https://linkedin.com/in/hannatonthat'">
+                    <img src="./assets/images/github.png" alt="GitHub" class="info-icon" onclick="location.href='https://github.com/hannatonthat'">
+                </div>
             </div>
-        </div>
     </section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
