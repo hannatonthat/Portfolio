@@ -22,9 +22,7 @@ function observerCallback(entries, observer) {
 }
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-const itemsToObserve = document.querySelectorAll('.timeline-item, .projects-item, .skills-box, .contact-container');
-
+const itemsToObserve = document.querySelectorAll('.timeline-item, .projects-item, .skills-box, .contact-container, .about-container');
 itemsToObserve.forEach((item) => observer.observe(item));
 
 var typed = new Typed(".auto-type", {
