@@ -64,7 +64,7 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     list-style: none;
     font-size: 1.2rem;
     font-weight: 600;
@@ -170,13 +170,6 @@ a:hover::after {
     transition: all 0.3s ease-in-out;
 }
 
-.menu-nav {
-    display: flex; /* Arrange children in a row */
-    justify-content: space-between; /* Space them out evenly, with space between */
-    align-items: center; /* Vertically center the items */
-    width: 100%; /* Make sure the container takes up the full width */
-}
-
 .menu-links {
     position: absolute;
     top: 100%;
@@ -186,7 +179,7 @@ a:hover::after {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    padding-top: 1rem;
+    margin-top: 0.5rem;
     border-radius: 7.5px;
     z-index: 100;
 }
@@ -216,6 +209,11 @@ a:hover::after {
 
 .menu-links.open {
     max-height: 300px;
+}
+
+.menu-nav {
+    display: flex;
+    gap: 1rem;
 }
 
 .hamburger-icon.open span:first-child {
