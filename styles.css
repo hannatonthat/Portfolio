@@ -58,7 +58,7 @@ nav-links {
 nav {
     justify-content: space-around;
     align-items: center;
-    padding-top: 0.5rem;
+    padding-top: 0rem;
     height: 10vh;
 }
 
@@ -269,6 +269,21 @@ section {
 .title {
     padding: 0;
     font-size: 3rem;
+    background: linear-gradient(to right, #20d0ef, #fb0197, #20d0ef, #fb0197);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 5s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
 }
 
 .auto-type-box {
