@@ -35,3 +35,11 @@ var typed = new Typed(".auto-type", {
     cursorChar: "|",
     cursorBlinking: true,
 });
+
+const cursor = document.getElementById('custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    const cursorSize = cursor.offsetWidth / 2;
+    cursor.style.left = `${e.clientX - cursorSize}px`;
+    cursor.style.top = `${e.clientY - cursorSize}px`;
+});
