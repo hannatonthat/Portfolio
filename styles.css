@@ -247,7 +247,11 @@ section {
 }
 
 @media screen and (max-width: 767px) {
-    .section {
+    section {
+        margin: 0 10%;
+    }
+    nav {
+        justify-content:space-between;
         margin: 0 10%;
     }
 }
