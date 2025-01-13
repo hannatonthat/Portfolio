@@ -59,7 +59,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding-top: 0rem;
-    height: 10vh;
+    height: 3rem;
 }
 
 .nav-links {
@@ -240,7 +240,7 @@ a:hover::after {
 }
 
 section {
-    padding-top: 4vh;
+    padding-top: 8vh;
     margin: 0 20%;
     box-sizing: border-box;
     min-height: fit-content;
@@ -427,10 +427,11 @@ section {
 .timeline-items::before {
     content: ' ';
     position: absolute;
-    width: 2px;
+    width: 5px;
+
     height: 100%;
     background-color: rgb(33, 33, 33);
-    left: calc(50% - 1px);
+    left: calc(50% - 2.5px);
 }
 
 .timeline-item {
@@ -439,11 +440,11 @@ section {
 }
 
 .timeline-item:nth-child(odd) {
-    margin-right: calc(50% + 2rem);
+    margin-right: calc(50% + 4.5rem);
 }
 
 .timeline-item:nth-child(even) {
-    margin-left: calc(50% + 2rem);
+    margin-left: calc(50% + 4.5rem);
 }
 
 .timeline-item:last-child {
@@ -451,23 +452,25 @@ section {
 }
 
 .timeline-dot {
-    height: 16px;
-    width: 16px;
+    height: 4.5rem;
+    width: 4.5rem;
     background-color: rgb(33, 33, 33);
     border-radius: 50%;
     position: absolute;
 }
 
+.timeline-dot img {
+    border-radius: 100%;
+}
+
 .timeline-item:nth-child(odd) .timeline-dot {
-    left: calc(100% + 8px);
+    left: calc(100% + 2.25rem);
     text-align: left;
-    margin-left: 1rem;
 }
 
 .timeline-item:nth-child(even) .timeline-dot {
-    right: calc(100% + 8px);
+    right: calc(100% + 2.25rem);
     text-align: right;
-    margin-right: 1rem;
 }
 
 .timeline-date {
@@ -476,19 +479,17 @@ section {
     color: white;
     transform: translateY(-50%);
     white-space: nowrap;
-    margin-top: 0.5rem;
+    margin-top: 2.25rem;
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
-    left: calc(100% + 3rem);
+    left: calc(100% + 9rem);
     text-align: left;
-    margin-left: 1rem;
 }
 
 .timeline-item:nth-child(even) .timeline-date {
-    right: calc(100% + 3rem);
+    right: calc(100% + 9rem);
     text-align: right;
-    margin-right: 1rem;
 }
 
 .timeline-content {
@@ -528,7 +529,7 @@ section {
 
 .projects-item {
     width: 100%;
-    height: 16rem;
+    height: 50vh;
     border-radius: 10px;
     background-color: rgb(33, 33, 33);
 }
@@ -743,9 +744,15 @@ section {
     }
     .timeline-items::before {
         left: calc(1rem - 1px);
+        width: 2px;
     }
     .timeline-dot {
         left: 0.5rem;
+        height: 16px;
+        width: 16px;
+    }
+    .timeline-dot img {
+        display: none;
     }
     .timeline-item:nth-child(odd) .timeline-dot {
         left: calc(-1rem - 8px);
@@ -758,13 +765,16 @@ section {
         background-color: rgb(33, 33, 33);
     }
     .timeline-item:nth-child(odd) .timeline-date {
-        left: 0;
+        left: 0.25rem;
         margin-left: 0;
         margin-top: 0.5rem;
     } 
     .timeline-item:nth-child(even) .timeline-date {
-        left: 0;
+        left: 0.25rem;
         margin-top: 0.5rem;
+    }
+    .timeline-dot .skills-img {
+        display: none;
     }
 }
 
