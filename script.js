@@ -26,7 +26,7 @@ const itemsToObserve = document.querySelectorAll('.timeline-item, .projects-item
 itemsToObserve.forEach((item) => observer.observe(item));
 
 var typed = new Typed(".auto-type", {
-    strings: ["Software Developer", "Robotics Engineer", "AI Engineer"],
+    strings: ["Software Developer", "Robotics Engineer", "AI/ML Engineer"],
     typeSpeed: 150,
     backSpeed: 150,
     loop: true,

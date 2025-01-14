@@ -18,7 +18,7 @@ h1 {
     margin: auto;
     font-weight: 600;
     font-size: 1.6rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
 }
 
@@ -240,7 +240,8 @@ a:hover::after {
 }
 
 section {
-    padding-top: 8vh;
+    padding-top: 0;
+    padding-bottom: 4rem;
     margin: 0 20%;
     box-sizing: border-box;
     min-height: fit-content;
@@ -262,9 +263,10 @@ section {
 }
 
 #home {
+    padding-top: 1rem;
     display: flex;
     justify-content: left;
-    height: 80vh;
+    height: 95vh;
 }
 
 .section__text {
@@ -428,7 +430,6 @@ section {
     content: ' ';
     position: absolute;
     width: 5px;
-
     height: 100%;
     background-color: rgb(33, 33, 33);
     left: calc(50% - 2.5px);
@@ -483,12 +484,12 @@ section {
 }
 
 .timeline-item:nth-child(odd) .timeline-date {
-    left: calc(100% + 9rem);
+    left: calc(100% + 9.25rem);
     text-align: left;
 }
 
 .timeline-item:nth-child(even) .timeline-date {
-    right: calc(100% + 9rem);
+    right: calc(100% + 9.25rem);
     text-align: right;
 }
 
@@ -521,17 +522,15 @@ section {
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    gap: 3rem;
 }
 
 .projects-item {
     width: 100%;
-    height: 50vh;
-    border-radius: 10px;
-    background-color: rgb(33, 33, 33);
+    height: auto;
 }
 
 .projects-item {
@@ -543,6 +542,10 @@ section {
 .projects-item.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.projects-item h2 {
+    padding-bottom: 0.5rem;
 }
 
 #contact {
@@ -648,13 +651,16 @@ section {
     width: 100%;
     height: 0.05rem;
     background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .info-text-box {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin: 0.5rem 0;
+    margin: 0;
+    padding: 0;
 }
 
 #info-socials-container{
@@ -665,6 +671,7 @@ section {
 
 .info-icon {
     cursor: pointer;
+    padding: 0.25rem 0;
     height: 2rem;
     transition: all 300ms ease;
 }
@@ -792,4 +799,16 @@ section {
     .contact-container {
         flex-wrap: wrap;
     }
+}
+
+#contact {
+    margin-top: 0rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+}
+
+#info {
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
