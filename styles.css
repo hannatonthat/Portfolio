@@ -548,6 +548,27 @@ section {
     padding-bottom: 0.5rem;
 }
 
+.projects-skills {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.projects-skill {
+    cursor: default;
+    padding: 0.2rem 0.5rem;
+    background-color: rgb(33, 33, 33);
+    border-radius: 5px;
+    transition: all 300ms ease;;
+}
+
+.projects-skill:hover {
+    transform: scale(1.05);
+}
+
 #contact {
     margin-top: 2rem;
     margin-bottom: 2rem;
