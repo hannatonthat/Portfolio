@@ -64,3 +64,14 @@ document.getElementById('copy-email-icon').addEventListener('click', function() 
             console.error('Error copying email: ', error);
         });
 });
+
+document.getElementById('copy-email-info-icon').addEventListener('click', function() {
+    const email = "htonthat@uwaterloo.ca";
+    navigator.clipboard.writeText(email)
+        .then(function() {
+            alert('Email copied to clipboard!');
+        })
+        .catch(function(error) {
+            console.error('Error copying email: ', error);
+        });
+});
