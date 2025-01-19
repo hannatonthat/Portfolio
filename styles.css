@@ -651,6 +651,7 @@ section {
     padding: 0.7rem;
     cursor: pointer;
     background-color: white;
+    color: rgb(33, 33, 33);
     margin-top: 0.3rem;
 }
 
