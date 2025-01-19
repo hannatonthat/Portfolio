@@ -6,7 +6,7 @@
 body {
     background-color: black;
     color: white;
-    font-family: 'Nunito';
+    font-family: 'Open Sans', sans-serif;
 }
 
 html {
@@ -17,21 +17,22 @@ h1 {
     position: relative;
     margin: auto;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
 }
 
 h2 {
     position: relative;
-    font-weight: 400;
-    font-size: 1.4rem;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 h3 {
     position: relative;
+    color: white;
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 p {
@@ -66,54 +67,9 @@ nav {
     display: flex;
     gap: 1rem;
     list-style: none;
-    font-size: 1.2rem;
-    font-weight: 600;
-    align-items: center;
-}
-
-#language-toggle {
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-family: 'Nunito';
-    color: white;
-    background-color: black;
-    border-width: 1.5px;
-    border-color: white;
-    border-radius: 5px;
-    padding: 0 0.25rem 0 0.25rem;
-    transition: all 300ms ease-in-out;
-    outline: none;
-    box-shadow: none;
-}
-#language-toggle {
     font-size: 1rem;
-    font-weight: 600;
-    font-family: 'Nunito';
-    color: white;
-    background-color: transparent;
-    border-width: 1.5px;
-    border-color: white;
-    border-style: solid;
-    border-radius: 5px;
-    padding: 0 0.25rem;
-    transition: all 300ms ease-in-out;
-    outline: none;
-    box-shadow: none;
-}
-
-#language-toggle:focus,
-#language-toggle:active {
-    color: white;
-    background-color: transparent;
-    border-color: white;
-    outline: none;
-    box-shadow: none;
-}
-
-#language-toggle:hover {
-    color: black;
-    background-color: white;
-    cursor: pointer;
+    font-weight: 400;
+    align-items: center;
 }
 
 a {
@@ -141,8 +97,8 @@ a:hover::after {
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 #hamburger-nav {
@@ -188,7 +144,7 @@ a:hover::after {
     display: block;
     padding: 10px;
     text-align: center;
-    font: 1.2rem;
+    font: 1rem;
     color: white;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -242,7 +198,7 @@ a:hover::after {
 section {
     padding-top: 0;
     padding-bottom: 4rem;
-    margin: 0 20%;
+    margin: 0 22%;
     box-sizing: border-box;
     min-height: fit-content;
 }
@@ -281,6 +237,7 @@ section {
 .title {
     padding: 0;
     font-size: 3rem;
+    font-weight: 600;
     background: linear-gradient(to right, #20d0ef, #fb0197, #20d0ef, #fb0197);
     background-size: 300% 300%;
     background-clip: text;
@@ -305,7 +262,12 @@ section {
 }
 
 .auto-type {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.title-intro {
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
@@ -506,6 +468,14 @@ section {
     margin-left: 1rem;
 }
 
+.timeline-content h2 {
+    font-size: 1.2rem;
+}
+
+.timeline-content h3 {
+    font-weight: 600;
+}
+
 .timeline-item {
     opacity: 0;
     transform: translateY(20px);
@@ -540,11 +510,12 @@ section {
 }
 
 .projects-item h2 {
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 .projects-skills {
-    margin: 0.5rem 0;
+    margin: 1.5rem 0;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -641,7 +612,7 @@ section {
 }
 
 .contact-form-txt {
-    font-family: 'Nunito';
+    font-family: 'Open Sans';
     font-size: 1rem;
     box-sizing: border-box;
     width: 100%;
@@ -655,7 +626,7 @@ section {
 }
 
 .contact-form-textarea {
-    font-family: 'Nunito';
+    font-family: 'Open Sans';
     font-size: 1rem;
     box-sizing: border-box;
     width: 100%;
@@ -671,7 +642,7 @@ section {
 .contact-form-btn {
     text-align: center;
     box-sizing: border-box;
-    font-family: 'Nunito';
+    font-family: 'Open Sans';
     font-size: 1rem;
     width: 100%;
     border: none;
@@ -679,6 +650,8 @@ section {
     border-radius: 15px;
     padding: 0.7rem;
     cursor: pointer;
+    background-color: white;
+    margin-top: 0.3rem;
 }
 
 .contact-container {
